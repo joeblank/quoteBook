@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='quoteBook'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+    <title>Quote Book</title>
+  </head>
+  <body ng-controller='mainCtrl'>
+<!-- <button ng-click='saveQuotes()' type="button" name="button">Save List</button> -->
+    <input ng-model='quoteToAdd' type="text" name="name" placeholder="Type Quote Here">
+    <input ng-model='authorToAdd' type="text" name="name" placeholder="Name of Author">
+    <button ng-click='addQuote()' type="button" name="button">Add Your Quote</button>
+  </br>
+  <h2>Filter by quote/author: </br>
+  <input ng-model='filterText' type="text" name="name" placeholder='quote...'> </h2>
+  <!-- <h2>Filter by author: <input ng-model='filterAuthor' type="text" name="name" placeholder="author name..."></h2> -->
+
+    <div class='quote-container' ng-repeat='quote in quotes track by $index'>
+      <p>
+        "{{quote.text}}""
+      </p>
+      <h4>Author: {{quote.author}}</h4>
+      <button ng-click='remove(quote.text)'>Delete</button>
+    </div>
+
+
+
+
+
+
+
+
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js'></script>
+<script src='js/app.js'></script>
+<script src='js/mainCtrl.js'></script>
+<script src='js/dataService.js'></script>
+
+
+  </body>
+</html>

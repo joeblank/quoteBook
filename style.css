@@ -1,0 +1,15 @@
+@import 'https://fonts.googleapis.com/css?family=Baloo+Bhai|Lalezar';
+
+
+body {
+  background: rgb(100, 100, 100);
+}
+.quote-container {
+  width: 800px;
+  color: white;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  background: url('https://hd.unsplash.com/photo-1414476367528-f23f72691de0') no-repeat center;
+  background-size: cover;
+}
